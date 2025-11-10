@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="info.cukes.gherkin" type="repository">
+    <properties maven-id="info.cukes:gherkin:2.9.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/info/cukes/gherkin/2.9.0/gherkin-2.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

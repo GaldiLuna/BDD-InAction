@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BDD-InAction.iml" filepath="$PROJECT_DIR$/BDD-InAction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BDD.iml" filepath="$PROJECT_DIR$/BDD.iml" />
     </modules>
   </component>
 </project>
