@@ -37,7 +37,7 @@ public class Line {
         return this;
     }
 
-    // **MÉTODO DE DOMÍNIO (NECESSÁRIO PARA O TimetableService)**
+    // **MÉTODO DE DOMÍNIO (NECESSÁRIO PARA O steps.services.TimetableService)**
     public List<LocalTime> getArrivalTimesAt(String station) {
         // Retorna os horários ou uma lista vazia se a estação não tiver horários definidos
         return arrivalTimesByStation.getOrDefault(station, Collections.emptyList());

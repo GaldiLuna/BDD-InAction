@@ -1,20 +1,25 @@
-import org.joda.time.LocalTime;
-import java.util.List;
-import java.util.Collections;
+TimetableService timetableService = Mock(TimetableService) // Criar um serviço de horário “fingido”.
 
-public class TimetableService {
+def "should calculate the correct arrival time"() {
+    given:
+    def westernLine =
+            Line.named("Western").departingFrom("Emu Plains") // (B) Definir uma linha de trem.
 
-    // Este é o método que o ItineraryService estava "mockando"
-    public List<LocalTime> findArrivalTimes(Line line, String targetStation) {
+    // O serviço de horário fingido retorna esta linha de trem quando você pergunta quais linhas
+    // passam por Parramatta e Town Hall.
+    timetableService.findLinesThrough("Parramatta",
+            "Town Hall") >> [westernLine]
 
-        // Chamamos um método no objeto Line para obter os horários de chegada.
-        // O objeto Line é o responsável por saber se ele atende aquela estação e quais são os horários.
-        return line.getArrivalTimesAt(targetStation);
-    }
+    // (C) O serviço de horário fingido também lhe dá os horários de chegada corretos em Parramatta.
+    timetableService.findArrivalTimes(westernLine, "Parramatta") >>
+            [at(7,58), at(8,00), at(8,02), at(8,11), at(8,14), at(8,21)]
 
-    // Assinatura (mantida por completude, embora não implementada neste exercício)
-    public List<Line> findLinesThrough(String departure, String destination) {
-        // ...
-        return Collections.emptyList(); // Apenas um placeholder
-    }
+    when:
+    def proposedTrainTimes =
+            itineraryService.findNextDepartures("Parramatta",
+                    "Town Hall",
+                    at(8,00));
+
+    then:
+    proposedTrainTimes == [at(8,02), at(8,11), at(8,14)]
 }
