@@ -1,0 +1,5 @@
+Nível -- Pergunta -- Resposta (Simulação do Stakeholder)
+Recurso/Solução -- Queremos alertas por SMS quando houver discrepância. Por que precisamos disso? -- Porque as empresas de ônibus estão alegando mais viagens do que as registradas nos nossos dados em tempo real.
+Nível 1 (Problema) -- Por que é um problema se as empresas alegam mais viagens do que o registrado? -- Porque isso significa que estamos pagando subsídios por viagens que não foram realizadas, ou seja, estamos perdendo dinheiro.
+Nível 2 (Impacto no Negócio) -- Por que precisamos ser alertados sobre a perda de dinheiro em tempo real (via SMS)? -- Porque quanto mais cedo soubermos de uma discrepância, mais cedo podemos intervir (auditar/rejeitar) o pedido de pagamento para aquela viagem ou empresa.
+Nível 3 (Objetivo de Negócio) -- E por que a intervenção precoce é tão crucial para o nosso negócio? -- Porque nosso objetivo principal é proteger os fundos públicos e garantir que os subsídios sejam pagos apenas por serviços comprovados, minimizando o desperdício (waste) e o risco de fraude.
