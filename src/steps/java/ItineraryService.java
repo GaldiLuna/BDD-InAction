@@ -1,5 +1,8 @@
 package steps.java;
 
+import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.When;
+
 public class ItineraryService {
     private List<LocalTime> getArrivalTimesOnLines(List<Line> lines,
                                                    String station) {
@@ -42,5 +45,25 @@ public class ItineraryService {
             }
         }
         return viableArrivalTimes;
+    }
+
+    TestDatabaseAPI inTheTestDatabase; // Configurar o banco de dados de teste através de uma API dedicada.
+
+    @Given("the flying distance between $departure and $destination is $distance km") // Que texto deve acionar esta definição de passo
+    public void defineTheFlyingDistanceForATrip(String departure,
+                                                String destination,
+                                                int distance) {
+        inTheTestDatabase.theDistanceBetween(departure) // Usar esta API para configurar os dados de teste.
+                .and(destination).is(distance); // O código que implementa este passo // Injetar os dados de teste no banco de dados.
+    }
+
+    @When("I register for the Frequent Flyer program")
+    public void whenIRegisterForTheFrequentFlyerProgram() {
+        // ...
+    }
+
+    @Given("I am a $status Frequent Flyer member")
+    public void useAMemberWithAGivenStatus(Status status) {
+        // ...
     }
 }

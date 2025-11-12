@@ -1,0 +1,6 @@
+package steps.java;
+
+import net.thucydides.jbehave.ThucydidesJUnitStories;
+
+public class AcceptanceTestSuite extends ThucydidesJUnitStories {
+}
