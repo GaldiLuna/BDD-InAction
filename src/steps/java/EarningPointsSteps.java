@@ -4,12 +4,21 @@ import com.sun.jna.platform.win32.Advapi32Util;
 //import Advapi32Util.Account;
 
 import cucumber.api.DataTable;
+import jxl.write.DateTime;
 import net.thucydides.core.Thucydides;
+import org.jbehave.core.annotations.Alias;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.jbehave.core.model.ExamplesTable;
 
+import java.lang.reflect.Member;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -90,4 +99,34 @@ public class EarningPointsSteps {
         Member member = Thucydides.getCurrentSession().get("member"); // Reutiliza o membro que você armazenou anteriormente.
         // ...
     }
+
+    SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy"); // Um formatador de data usado para analisar a coluna de data.
+    @Given("I have travelled on the following flights: $flights")
+    public void travelled_on_flights(ExamplesTable flights) // Passa a tabela como um ExamplesTable.
+            throws ParseException {
+        for(Map<String,String> flightDetails : flights.getRows()) { // Itera sobre as linhas na tabela.
+            Flight flight = Flight.number(flightDetails.get("flight")) // Extrai os valores dos campos da linha.
+                    .from(flightDetails.get("from"))
+                    .to(flightDetails.get("to"));
+            Date date = formatter.parse(flightDetails.get("date"));
+            member.flewOnFlight(flight).on(date); // Atualiza o banco de dados de teste com os novos dados.
+        }
+    }
+
+    @When("I fly from $departure to $destination")
+    @Alias("I travel from <departure> to <destination>")
+    // se as variações forem muito próximas, você também pode usar o formato mais compacto abaixo
+    @When("I {fly|travel} from $departure to $destination on $date at $time")
+    public void whenIFlyFrom(String departure,
+                             String destination,
+                             DateTime date,
+                             LocalTime time) {
+        // TODO: adicionar este voo à conta do membro
+    }
+
+    @Then("I should earn $points points")
+    public void thenIShouldEarn(int points) {
+        assertThat(points).isEqualTo(earnedPoints); // Você ganhou o número certo de pontos?
+    }
+// A variável earnedPoints é atribuída em um passo anterior.
 }

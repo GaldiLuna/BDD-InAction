@@ -1,7 +1,19 @@
 package steps.java;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import io.cucumber.messages.internal.com.google.common.collect.Lists;
+import io.cucumber.messages.internal.com.google.common.collect.Sets;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.When;
+import steps.services.Status;
+
+import javax.sound.sampled.Line;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.TreeSet;
 
 public class ItineraryService {
     private List<LocalTime> getArrivalTimesOnLines(List<Line> lines,
@@ -62,8 +74,37 @@ public class ItineraryService {
         // ...
     }
 
-    @Given("I am a $status Frequent Flyer member")
-    public void useAMemberWithAGivenStatus(Status status) {
-        // ...
+    // A expressão regular (.*) será passada para o parâmetro status.
+    // Expressões regulares aparecem entre parênteses.
+    // O símbolo ^ indica o início de uma linha, e o símbolo $ indica o final de uma linha.
+    @Given("^I am a (.*) Frequent Flyer member$")
+    public void useAMemberWithAGivenStatus(String status) {
+        member = members.getMember().withStatus(status);
+    }
+    // A expressão regular corresponderá aos passos em uma tabela ou em um cenário convencional.
+
+    // Note que as anotações Cucumber vêm de um pacote diferente das do JBehave.
+    @Given("I am a Gold Frequent Flyer member")
+    public void useAMemberWithGoldStatus() {
+        // TODO: use a member with a Gold status
+    }
+
+    @When("^I (?:fly|travel) from (.*) to (.*) on (.*)$") // A primeira expressão regular será correspondida, mas não capturada.
+    public void I_fly_from(String departure, String destination, Date date){
+        // TODO // Agora não há parâmetros suficientes para todas as expressões regulares.
+    }
+
+    @Given("^the following accounts:$")
+    public void the_following_accounts(List<Account> accounts) {
+        InTestDatabase.createAccounts(accounts);
+    }
+
+    @Given("the {flying|travelling} distance between (.*) and (.*) is (\\d+) km")
+    public void define_flying_distance(String flightMode,
+                                       String departure,
+                                       String destination,
+                                       int distance) {
+
+        throw new PendingException("Not finished yet!");
     }
 }
