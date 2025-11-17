@@ -1,0 +1,46 @@
+<component name="libraryTable">
+  <library name="codedx.webapp.runner.memcached" type="repository">
+    <properties maven-id="com.codedx:webapp-runner-memcached:9.0.65.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codedx/webapp-runner-memcached/9.0.65.0/webapp-runner-memcached-9.0.65.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/codedx/webapp-runner-main/9.0.65.0/webapp-runner-main-9.0.65.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/de/javakaffee/msm/memcached-session-manager-tc9/2.3.0/memcached-session-manager-tc9-2.3.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/de/javakaffee/msm/memcached-session-manager/2.3.0/memcached-session-manager-2.3.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/spy/spymemcached/2.12.0/spymemcached-2.12.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/annotations/3.0.1/annotations-3.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.65/tomcat-embed-core-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-annotations-api/9.0.65/tomcat-annotations-api-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-logging-juli/9.0.0.M6/tomcat-embed-logging-juli-9.0.0.M6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/9.0.65/tomcat-embed-jasper-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/9.0.65/tomcat-embed-el-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jasper/9.0.65/tomcat-jasper-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-servlet-api/9.0.65/tomcat-servlet-api-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-juli/9.0.65/tomcat-juli-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-el-api/9.0.65/tomcat-el-api-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-api/9.0.65/tomcat-api-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-util-scan/9.0.65/tomcat-util-scan-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-util/9.0.65/tomcat-util-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jasper-el/9.0.65/tomcat-jasper-el-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jsp-api/9.0.65/tomcat-jsp-api-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.65/tomcat-embed-websocket-9.0.65.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.6/commons-io-2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codedx/webapp-runner-memcached/9.0.65.0/webapp-runner-memcached-9.0.65.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/codedx/webapp-runner-main/9.0.65.0/webapp-runner-main-9.0.65.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/de/javakaffee/msm/memcached-session-manager-tc9/2.3.0/memcached-session-manager-tc9-2.3.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/de/javakaffee/msm/memcached-session-manager/2.3.0/memcached-session-manager-2.3.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/spy/spymemcached/2.12.0/spymemcached-2.12.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/annotations/3.0.1/annotations-3.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.6/commons-io-2.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
