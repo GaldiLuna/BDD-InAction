@@ -1,5 +1,5 @@
 package steps.services;
 
 public enum Status {
-    Gold, Silver, Bronze;
+    Bronze, Silver, Gold, Platinum;
 }
