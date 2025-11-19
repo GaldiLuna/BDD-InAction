@@ -1,4 +1,4 @@
-package steps.java;
+package steps.services;
 
 public @interface Autowired {
 }

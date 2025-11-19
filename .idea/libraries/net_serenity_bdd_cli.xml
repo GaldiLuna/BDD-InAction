@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="net.serenity.bdd.cli" type="repository">
+    <properties maven-id="net.serenity-bdd:serenity-cli:4.2.34" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/serenity-bdd/serenity-cli/4.2.34/serenity-cli-4.2.34.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/serenity-bdd/serenity-cli/4.2.34/serenity-cli-4.2.34-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

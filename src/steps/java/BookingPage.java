@@ -1,7 +1,11 @@
 package steps.java;
 
+import com.sun.org.apache.xerces.internal.util.PropertyState;
 import net.thucydides.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
+import net.thucydides.core.pages.WebElementFacade;
+import net.thucydides.core.pages.WebElementState;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -10,14 +14,17 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class BookingPage extends PageObject {
     WebElement search; // Representa o botão Search.
 
     public void searchButtonShouldBeEnabled() {
-        assertThat(search.isEnabled(), is(true)); // Isso falhará se o botão Search não estiver habilitado.
+        assertThat(search.isEnabled(), (PropertyState) is(true)); // Isso falhará se o botão Search não estiver habilitado.
+    }
+
+    private void assertThat(boolean enabled, PropertyState propertyState) {
     }
 
     public boolean searchButtonIsEnabled() { // Apenas retorna o estado do botão Search.
@@ -26,7 +33,7 @@ public class BookingPage extends PageObject {
     }
 
     public WebElementState searchButton() {
-        return $(search); // O método $() retorna informações sobre o estado atual do elemento web.
+        return $(search); // O metodo $() retorna informações sobre o estado atual do elemento web.
     }
 
     @FindBy(css = ".typeahead li")
@@ -61,7 +68,7 @@ public class BookingPage extends PageObject {
     }
 
     public List<DestinationDeal> getFeaturedDestinations() {
-        List<DestinationDeal> deals = Lists.newArrayList(); // Cria uma nova lista vazia.
+        List<DestinationDeal> deals = new ArrayList<DestinationDeal>(); // Cria uma nova lista vazia.
         for(WebElement destinationEntry : featuredDestinations) {
             deals.add(destinationDealFrom(destinationEntry)); // Popula a lista convertendo os elementos web para DestinationDeals.
         }

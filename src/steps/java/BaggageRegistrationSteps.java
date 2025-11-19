@@ -1,8 +1,14 @@
 package steps.java;
 
+import org.fest.assertions.BooleanAssert;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 public class BaggageRegistrationSteps {
     String message;
@@ -17,8 +23,8 @@ public class BaggageRegistrationSteps {
 
     @When("^the baggage registration is processed$")
     public void the_baggage_registration_is_processed() throws Throwable {
-        service = new RegistrationService(); // (B) Cria uma nova instância de serviço.
-        baggageRegistration = service.registerBaggage(message); // (C) Processa a mensagem de registro.
+        service = new RegistrationService(); // Cria uma nova instância de serviço.
+        baggageRegistration = service.registerBaggage(message); // Processa a mensagem de registro.
     }
 
     @Then("^the registration details should be:$")
@@ -26,6 +32,7 @@ public class BaggageRegistrationSteps {
             List<BaggageRegistration> expectedDetails)
             throws Throwable {
         BaggageRegistration expected = expectedDetails.get(0);
-        assertThat(baggageRegistration). isEqualTo(expected); // (D) Verifica os resultados.
+        assertEquals(expected, baggageRegistration); // Verifica os resultados.
     }
+
 }

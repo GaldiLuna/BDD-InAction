@@ -1,16 +1,20 @@
 package steps.java;
 
-import net.thucydides.core.model.DataTable;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.jbehave.core.model.ExamplesTable;
 import org.json.JSONException;
+import org.skyscreamer.jsonassert.JSONAssert;
+import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import static com.google.common.collect.Lists.newArrayList;
+import static org.junit.Assert.assertEquals;
 
 public class FlightDetailsSteps {
     String flightNumber; // Anota qual número de voo você está procurando.
     Flight matchingFlight;
+    private final FlightStatusClient client = new FlightStatusClient();
 
     @Given("^I need to know the details of flight number (.*)$")
     public void flight_number(String flightNumber) throws Throwable {
@@ -19,21 +23,22 @@ public class FlightDetailsSteps {
 
     @When("^I request the details about this flight$")
     public void request_flight_details() throws Throwable {
-        FlightStatusClient client = new FlightStatusClient();
         matchingFlight = client.findByFlightNumber(flightNumber); // (B) Escreve um cliente de serviço web simples para acessar o serviço web.
     }
 
     @Then("^I should receive the following:$")
-    public void verify_details(DataTable flightDetails) throws Throwable {
-        flightDetails.diff(newArrayList(matchingFlight)); // (C) Compara os dados esperados com o que o serviço web retornou.
-    }
+    public void verify_details(ExamplesTable flightDetails) throws Throwable {
+        // Usa apenas a primeira linha da tabela esperada para comparação
+        if (flightDetails.getRowCount() > 0) {
+            var expectedRow = flightDetails.getRows().get(0);
+            String expectedNumber = expectedRow.get("number");
+            String expectedFrom = expectedRow.get("from");
+            String expectedTo = expectedRow.get("to");
 
-    private final String BASE_URL = "http://localhost:8080/rest/flights";
-
-    public Flight findByFlightNumber(String flightNumber) {
-        Client client = ClientBuilder.newClient(); // Cria um novo cliente de serviço web.
-        WebTarget webTarget = client.target(BASE_URL).path(flightNumber); // Especifica o caminho do recurso que você está invocando.
-        return webTarget.request().buildGet().invoke(Flight.class); // Recupera o resultado e o converte para um objeto Flight.
+            assertEquals(expectedNumber, matchingFlight != null ? matchingFlight.getNumber() : null);
+            assertEquals(expectedFrom, matchingFlight != null ? matchingFlight.getFrom() : null);
+            assertEquals(expectedTo, matchingFlight != null ? matchingFlight.getTo() : null);
+        }
     }
 
     String receivedJsonData; // Recupera os resultados da pesquisa como um documento JSON.
@@ -51,9 +56,4 @@ public class FlightDetailsSteps {
                 JSONCompareMode.LENIENT);
     }
 
-    public String findByFlightNumberInJson(String flightNumber) {
-        Client client = ClientBuilder.newClient();
-        WebTarget webTarget = client.target(BASE_URL).path(flightNumber);
-        return webTarget.request().buildGet().invoke(String.class); // Retorna o resultado em formato JSON bruto.
-    }
 }

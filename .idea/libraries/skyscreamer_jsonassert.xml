@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="skyscreamer.jsonassert" type="repository">
+    <properties maven-id="org.skyscreamer:jsonassert:2.0-rc1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/2.0-rc1/jsonassert-2.0-rc1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20240303/json-20240303.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/2.0-rc1/jsonassert-2.0-rc1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20240303/json-20240303-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

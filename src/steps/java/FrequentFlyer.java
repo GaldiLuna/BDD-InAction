@@ -9,6 +9,7 @@ public class FrequentFlyer {
     private String firstName;
     private String lastName;
     private Status status = Status.Bronze; // Status inicial padronizado.
+    private int statusPoints;
     // Getters omitidos por brevidade
 
     // Construtor privado
@@ -24,10 +25,22 @@ public class FrequentFlyer {
         return new FFBuilder(number);
     }
 
+    public Object getFirstName() {
+        return firstName;
+    }
+
+    public Object getLastName() {
+        return lastName;
+    }
+
+    public Object getFrequentFlyerNumber() {
+        return frequentFlyerNumber;
+    }
+
     public static class FFBuilder {
         private String frequentFlyerNumber;
 
-        public FrequentFlyerBuilder(String frequentFlyerNumber) {
+        public void FrequentFlyerBuilder(String frequentFlyerNumber) {
             this.frequentFlyerNumber = frequentFlyerNumber;
         }
 
@@ -49,5 +62,8 @@ public class FrequentFlyer {
 
     private void updateStatusLevel() {
         setStatus(Status.statusLevelFor(statusPoints)); // Você precisa de um serviço para dizer qual status pode ser obtido para um dado número de pontos.
+    }
+
+    private void setStatus(Object statusPoints) {
     }
 }
