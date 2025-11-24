@@ -1,0 +1,39 @@
+<component name="libraryTable">
+  <library name="springframework.roo.propfiles.manager" type="repository">
+    <properties maven-id="org.springframework.roo:org.springframework.roo.propfiles.manager:2.0.0.RELEASE" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.propfiles.manager/2.0.0.RELEASE/org.springframework.roo.propfiles.manager-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/felix/org.apache.felix.scr.annotations/1.9.12/org.apache.felix.scr.annotations-1.9.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.project/2.0.0.RELEASE/org.springframework.roo.project-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/felix/org.apache.felix.framework/5.4.0/org.apache.felix.framework-5.4.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.support/2.0.0.RELEASE/org.springframework.roo.support-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.4/commons-io-2.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.8/commons-codec-1.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.file.monitor/2.0.0.RELEASE/org.springframework.roo.file.monitor-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.metadata/2.0.0.RELEASE/org.springframework.roo.metadata-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.model/2.0.0.RELEASE/org.springframework.roo.model-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.file.undo/2.0.0.RELEASE/org.springframework.roo.file.undo-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.shell/2.0.0.RELEASE/org.springframework.roo.shell-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.process.manager/2.0.0.RELEASE/org.springframework.roo.process.manager-2.0.0.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.shell.osgi/2.0.0.RELEASE/org.springframework.roo.shell.osgi-2.0.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.propfiles.manager/2.0.0.RELEASE/org.springframework.roo.propfiles.manager-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/felix/org.apache.felix.scr.annotations/1.9.12/org.apache.felix.scr.annotations-1.9.12-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.project/2.0.0.RELEASE/org.springframework.roo.project-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.support/2.0.0.RELEASE/org.springframework.roo.support-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.4/commons-io-2.4-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.8/commons-codec-1.8-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.file.monitor/2.0.0.RELEASE/org.springframework.roo.file.monitor-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.metadata/2.0.0.RELEASE/org.springframework.roo.metadata-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.model/2.0.0.RELEASE/org.springframework.roo.model-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.file.undo/2.0.0.RELEASE/org.springframework.roo.file.undo-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.shell/2.0.0.RELEASE/org.springframework.roo.shell-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.process.manager/2.0.0.RELEASE/org.springframework.roo.process.manager-2.0.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.shell.osgi/2.0.0.RELEASE/org.springframework.roo.shell.osgi-2.0.0.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

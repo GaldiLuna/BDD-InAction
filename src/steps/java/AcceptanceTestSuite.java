@@ -1,12 +1,15 @@
 package steps.java;
 
-import cucumber.api.junit.Cucumber;
-import cucumber.api.CucumberOptions;
 import net.thucydides.jbehave.ThucydidesJUnitStories;
 import org.junit.runner.RunWith;
-import cucumber.api.java.en.Given;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@Cucumber.Options(format = {"html:target/cucumber-html-report"})
+@CucumberOptions(
+        plugin = {"pretty", "html:target/cucumber-html-report"},
+        features = "src/test/resources/features",
+        glue = {"steps.java"}
+)
 public class AcceptanceTestSuite extends ThucydidesJUnitStories {
 }

@@ -1,11 +1,16 @@
 package steps.java;
 
+import java.util.LinkedHashMap;
+
 public class Flight {
     private final String number;
     private String from;
     private String to;
 
     private Flight(String number) { this.number = number; }
+
+    public Flight(LinkedHashMap<String, String> stringStringLinkedHashMap) {
+    }
 
     public static Flight number(String number) {
         return new Flight(number);

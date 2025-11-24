@@ -1,4 +1,4 @@
-package steps.java;
+package test.java;
 
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
@@ -7,6 +7,9 @@ import org.jbehave.core.model.ExamplesTable;
 import org.json.JSONException;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
+
+import steps.java.Flight;
+import test.java.FlightStatusClient;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static org.junit.Assert.assertEquals;

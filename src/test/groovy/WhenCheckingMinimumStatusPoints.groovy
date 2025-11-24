@@ -1,6 +1,10 @@
 package test.groovy
 
-class WhenCheckingMinimumStatusPoints extends Specification {
+import steps.services.Specification
+
+import java.lang.annotation.Annotation;
+
+class WhenCheckingMinimumStatusPoints implements Specification {
     def "should know the minimum points required for each status level"() {
         expect: // O expect do Spock pode ser usado para asserções de uma linha.
         FrequentFlyerStatus.statusLevelFor(points) == expectedStatus // O nível de status obtido com um dado número de pontos.
@@ -19,4 +23,24 @@ class WhenCheckingMinimumStatusPoints extends Specification {
     def lastPlaneOut = new Flight(from: "Sydney",
             to:"Hong Kong",
             number:"FH-525")
+
+    @Override
+    boolean equals(Object obj) {
+        return false
+    }
+
+    @Override
+    int hashCode() {
+        return 0
+    }
+
+    @Override
+    String toString() {
+        return null
+    }
+
+    @Override
+    Class<? extends Annotation> annotationType() {
+        return null
+    }
 }

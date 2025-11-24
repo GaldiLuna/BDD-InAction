@@ -1,22 +1,26 @@
 package steps.java;
 
+import groovy.util.Node;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import steps.services.Autowired;
+
+import steps.services.WebAppConfiguration;
+import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
+import static java.nio.file.Paths.get;
+import static org.hamcrest.Matchers.is;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import steps.services.Autowired;
-import org.springframework.beans.factory.annotation.Autowired;
-import steps.services.WebAppConfiguration;
-
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
-import static java.nio.file.Paths.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import static org.hamcrest.Matchers.is;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import steps.java.FlightStatusService;
+import steps.services.FlightStatus;
 
 @WebAppConfiguration
 @ContextConfiguration("classpath:cucumber.xml")
@@ -50,6 +54,14 @@ public class FlightStatusSteps {
                         is(flightId)))
                 .andExpect(model().attribute("flightStatus", // Os dados do modelo recuperados estão corretos?
                         is(expectedStatus.toString())));
+    }
+
+    private <E> Enum<E> view() {
+        return null;
+    }
+
+    private Node model() {
+        return null;
     }
 
     private Object is(String flightId) {

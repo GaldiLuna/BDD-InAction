@@ -1,7 +1,9 @@
-package steps.java;
+package test.java;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import steps.java.Flight;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

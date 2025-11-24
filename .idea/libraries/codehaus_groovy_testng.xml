@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="codehaus.groovy.testng" type="repository">
+    <properties maven-id="org.codehaus.groovy:groovy-testng:3.0.22" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/groovy/groovy-testng/3.0.22/groovy-testng-3.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/groovy/groovy/3.0.22/groovy-3.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.5/testng-7.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.78/jcommander-1.78.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/jquery/3.5.1/jquery-3.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/groovy/groovy-testng/3.0.22/groovy-testng-3.0.22-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/groovy/groovy/3.0.22/groovy-3.0.22-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.5/testng-7.5-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.78/jcommander-1.78-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
