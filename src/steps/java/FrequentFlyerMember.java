@@ -1,5 +1,7 @@
 package steps.java;
 
+import steps.services.Status;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -30,6 +32,14 @@ public class FrequentFlyerMember {
 
     public void setName(String name) { this.name = name; }
     public String getName() { return name; }
+
+    public Object earns(int earnedPoints) {
+        return null;
+    }
+
+    public Status getStatus() {
+        return null;
+    }
 
     private static class FlightRecord {
         final Flight flight;

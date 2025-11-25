@@ -1,5 +1,6 @@
 package steps.java;
 
+import org.fest.assertions.BooleanAssert;
 import org.junit.Test;
 import steps.services.Status;
 
@@ -9,6 +10,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static steps.services.Status.*;
 
@@ -17,16 +19,11 @@ public class WhenEarningStatusLevels {
     @Parameterized.Parameters
     public static Collection pointsPerStatus() {
         return Arrays.asList(new Object[][]{ // Os dados de teste vão aqui.
-                {Bronze, 0,
-                        100, Bronze},
-                {Bronze, 0,
-                        300, Silver},
+                {Bronze, 0, 100, Bronze},
+                {Bronze, 0, 300, Silver},
                 {Bronze, 100, 200, Silver},
-                {Silver, 0,
-                        700, Gold},
-                {Gold,
-                        0,
-                        1500, Platinum}
+                {Silver, 0, 700, Gold},
+                {Gold, 0, 1500, Platinum}
         });
     }
 
@@ -45,14 +42,18 @@ public class WhenEarningStatusLevels {
 
     @Test
     public void should_earn_new_status_based_on_point_thresholds() {
-        FrequentFlyer member
+        FrequentFlyerMember member
                 = FrequentFlyer.withFrequentFlyerNumber("12345678")
                 .named("Joe", "Jones")
                 .withStatusPoints(initialPoints)
-                .withStatus(initialStatus);
+                .withStatus(String.valueOf(initialStatus));
 
-        member.earns(earnedPoints).statusPoints(); // O teste é executado uma vez para cada linha de dados.
+        member.earns(earnedPoints).toString(); // O teste é executado uma vez para cada linha de dados.
 
-        assertThat(member.getStatus()).isEqualTo(finalStatus);
+        assertEquals(finalStatus, member.getStatus());
+    }
+
+    private BooleanAssert assertThat(Status status) {
+        return null;
     }
 }

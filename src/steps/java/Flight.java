@@ -7,9 +7,12 @@ public class Flight {
     private String from;
     private String to;
 
-    private Flight(String number) { this.number = number; }
+    private Flight(String number) {
+        this.number = number;
+    }
 
-    public Flight(LinkedHashMap<String, String> stringStringLinkedHashMap) {
+    public Flight(LinkedHashMap<String, String> stringStringLinkedHashMap, String number) {
+        this.number = number;
     }
 
     public static Flight number(String number) {

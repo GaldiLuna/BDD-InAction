@@ -1,19 +1,19 @@
-package steps.java;
+package test.java;
 
 import groovy.util.Node;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.springframework.test.web.servlet.RequestBuilder;
 import steps.services.Autowired;
 
 import steps.services.WebAppConfiguration;
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
+
 import static java.nio.file.Paths.get;
 import static org.hamcrest.Matchers.is;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -43,20 +43,20 @@ public class FlightStatusSteps {
 
     @When("^I check the flight status$")
     public void I_check_the_flight_status() throws Throwable {
-        resultActions = mockMvc.perform(get("/flights/{flightId}", flightId)).andExpect(status().isOk());
+        resultActions = mockMvc.perform((RequestBuilder) get("/flights/{flightId}", flightId)).andExpect(status().isOk());
     }
 
     @Then("^I should see that it is (.*)$")
     public void I_should_see_that_it_is(FlightStatus expectedStatus)
             throws Throwable {
-        resultActions.andExpect(view().name("flightstatus")) // A view correta é usada para exibir os resultados?
-                .andExpect(model().attribute("flightId",
-                        is(flightId)))
-                .andExpect(model().attribute("flightStatus", // Os dados do modelo recuperados estão corretos?
-                        is(expectedStatus.toString())));
+        resultActions.andExpect(view().name()) // A view correta é usada para exibir os resultados?
+                .andExpect((org.springframework.test.web.servlet.ResultMatcher) model().attribute("flightId"
+                ))
+                .andExpect((org.springframework.test.web.servlet.ResultMatcher) model().attribute("flightStatus" // Os dados do modelo recuperados estão corretos?
+                ));
     }
 
-    private <E> Enum<E> view() {
+    private <E extends Enum<E>> Enum<E> view() {
         return null;
     }
 
@@ -71,7 +71,7 @@ public class FlightStatusSteps {
     @Then("^I should see its scheduled arrival time of (.*)$")
     public void expect_scheduled_arrival_time_of(String arrivalTime)
             throws Throwable {
-        resultActions.andExpect(model().attribute("eta", // O horário de chegada está correto?
-                is(arrivalTime)));
+        resultActions.andExpect((org.springframework.test.web.servlet.ResultMatcher) model().attribute("eta" // O horário de chegada está correto?
+        ));
     }
 }

@@ -37,6 +37,14 @@ public class FrequentFlyer {
         return frequentFlyerNumber;
     }
 
+    public FrequentFlyerMember withStatusPoints(int initialPoints) {
+        return null;
+    }
+
+    public Object earns(int earnedPoints) {
+        return null;
+    }
+
     public static class FFBuilder {
         private String frequentFlyerNumber;
 

@@ -1,0 +1,34 @@
+<component name="libraryTable">
+  <library name="io.helidon.common.parameters" type="repository">
+    <properties maven-id="io.helidon.common:helidon-common-parameters:4.2.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-parameters/4.2.2/helidon-common-parameters-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common/4.2.2/helidon-common-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-mapper/4.2.2/helidon-common-mapper-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/builder/helidon-builder-api/4.2.2/helidon-builder-api-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/service/helidon-service-registry/4.2.2/helidon-service-registry-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/helidon/4.2.2/helidon-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/logging/helidon-logging-common/4.2.2/helidon-logging-common-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-context/4.2.2/helidon-common-context-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/metadata/helidon-metadata-hson/4.2.2/helidon-metadata-hson-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-buffers/4.2.2/helidon-common-buffers-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/service/helidon-service-metadata/4.2.2/helidon-service-metadata-4.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-types/4.2.2/helidon-common-types-4.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-parameters/4.2.2/helidon-common-parameters-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common/4.2.2/helidon-common-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-mapper/4.2.2/helidon-common-mapper-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/builder/helidon-builder-api/4.2.2/helidon-builder-api-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/service/helidon-service-registry/4.2.2/helidon-service-registry-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/helidon/4.2.2/helidon-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/logging/helidon-logging-common/4.2.2/helidon-logging-common-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-context/4.2.2/helidon-common-context-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/metadata/helidon-metadata-hson/4.2.2/helidon-metadata-hson-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-buffers/4.2.2/helidon-common-buffers-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/service/helidon-service-metadata/4.2.2/helidon-service-metadata-4.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/helidon/common/helidon-common-types/4.2.2/helidon-common-types-4.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

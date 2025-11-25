@@ -1,10 +1,10 @@
-//import com.bddinaction.chapter2.model.Line
+import steps.services.TimetableService;
+import steps.services.Specification
 
-//import spock.lang.Specification;
-import org.apache.tools.ant.taskdefs.optional.extension.Specification;
+import java.lang.annotation.Annotation;
 
-class WhenFindingLinesThroughStations extends Specification {
-    def timetableService = new steps.services.TimetableService()
+class WhenFindingLinesThroughStations implements Specification {
+    def timetableService = new TimetableService()
 
     def "should find the correct lines between two stations"() {
         when: // Ação sob teste.
@@ -19,5 +19,25 @@ class WhenFindingLinesThroughStations extends Specification {
         "Parramatta" | "Town Hall" | "Western" | "Emu Plains"
         "Town Hall"  | "Parramatta"| "Western" | "North Richmond"
         "Strathfield"| "Epping"    | "Epping"  | "City"
+    }
+
+    @Override
+    boolean equals(Object obj) {
+        return false
+    }
+
+    @Override
+    int hashCode() {
+        return 0
+    }
+
+    @Override
+    String toString() {
+        return null
+    }
+
+    @Override
+    Class<? extends Annotation> annotationType() {
+        return null
     }
 }
