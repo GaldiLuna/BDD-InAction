@@ -95,6 +95,15 @@
                     </includes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <forkCount>4</forkCount> <reuseForks>true</reuseForks> <includes>
+                    <include>com/bddinaction/chapter12/*.java</include> </includes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

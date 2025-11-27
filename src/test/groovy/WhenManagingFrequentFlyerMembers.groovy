@@ -1,6 +1,10 @@
 package test.groovy
 
-class WhenManagingFrequentFlyerMembers extends Specification { // Todas as especificações Spock estendem a classe Specification.
+import steps.services.Specification
+
+import java.lang.annotation.Annotation
+
+class WhenManagingFrequentFlyerMembers implements Specification { // Todas as especificações Spock estendem a classe Specification.
     def "a new frequent flyer should have Bronze status"() {
         given: // (B) Given
     def member = FrequentFlyer.withFrequentFlyerNumber("12345678").
@@ -34,5 +38,25 @@ class WhenManagingFrequentFlyerMembers extends Specification { // Todas as espec
         SILVER        | 0             | 700         | GOLD
         GOLD          | 0             | 1499        | GOLD
         GOLD          | 0             | 1500        | PLATINUM // Os dados de teste usados nos passos anteriores vêm daqui.
+    }
+
+    @Override
+    boolean equals(Object obj) {
+        return false
+    }
+
+    @Override
+    int hashCode() {
+        return 0
+    }
+
+    @Override
+    String toString() {
+        return null
+    }
+
+    @Override
+    Class<? extends Annotation> annotationType() {
+        return null
     }
 }

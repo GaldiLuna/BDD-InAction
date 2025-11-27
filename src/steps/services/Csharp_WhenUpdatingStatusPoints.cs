@@ -1,6 +1,7 @@
 [TestFixture]
 public class WhenUpdatingStatusPoints : nspec
-{
+    {
+
     [Test]
     public void ShouldBeAbleToAddStatusPointsEarnedFromAFlight()
     {...}
@@ -42,4 +43,20 @@ public class WhenUpdatingStatusPoints : nspec
             };
         };
     }
+
+    public class WhenTheFrequentFlyerAccountIsCreated // Contexto de alto nível
+        {
+            [Test]
+            public void it_should_have_zero_points() {...}
+            [Test]
+            public void it_should_have_Bronze_status() {...}
+        }
+
+        public class WhenCumulatingStatusPoints // Contexto mais específico
+        {
+            [Test]
+            public void should_earn_points_for_each_flight() {...}
+            [Test]
+            public void upgrade_status_level_with_enough_points() {...}
+        }
 }

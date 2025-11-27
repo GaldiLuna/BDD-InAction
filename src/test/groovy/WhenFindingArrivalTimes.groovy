@@ -1,8 +1,12 @@
 import org.joda.time.LocalTime;
 //import spock.lang.Specification;
-import org.apache.tools.ant.taskdefs.optional.extension.Specification;
+//import org.apache.tools.ant.taskdefs.optional.extension.Specification
+import steps.services.Specification;
+import steps.services.TimetableService
 
-class WhenFindingArrivalTimes extends Specification {
+import java.lang.annotation.Annotation;
+
+class WhenFindingArrivalTimes implements Specification {
 
     TimetableService timetableService = new TimetableService()
 
@@ -68,5 +72,25 @@ class WhenFindingArrivalTimes extends Specification {
         then:
         proposedTrainTimes == [at(8,02), at(8,11),
                                at(8,14), at(8,21)] // Você agora espera que o serviço de itinerário retorne quatro horários.
+    }
+
+    @Override
+    boolean equals(Object obj) {
+        return false
+    }
+
+    @Override
+    int hashCode() {
+        return 0
+    }
+
+    @Override
+    String toString() {
+        return null
+    }
+
+    @Override
+    Class<? extends Annotation> annotationType() {
+        return null
     }
 }
