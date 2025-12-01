@@ -1,12 +1,15 @@
 package steps.java;
 
-import cucumber.api.PendingException;
-import cucumber.api.java.en.Given;
-import io.cucumber.messages.internal.com.google.common.collect.Lists;
-import io.cucumber.messages.internal.com.google.common.collect.Sets;
+import com.google.common.collect.Sets;
+//import cucumber.api.PendingException;
+//import cucumber.api.java.en.Given;
+//import io.cucumber.messages.internal.com.google.common.collect.Lists;
+//import io.cucumber.messages.internal.com.google.common.collect.Sets;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.When;
 import steps.services.Status;
+import steps.services.DefaultTimetableService;
+import steps.services.TimetableService;
 
 import javax.sound.sampled.Line;
 import java.time.LocalTime;
@@ -14,10 +17,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.TreeSet;
+import static com.google.common.collect.Lists;
 
 public class ItineraryService {
     private List<LocalTime> getArrivalTimesOnLines(List<Line> lines,
                                                    String station) {
+        Sets Sets = null;
         TreeSet<LocalTime> allArrivalTimes = Sets.newTreeSet();
         for(Line line : lines) {
             allArrivalTimes.addAll(

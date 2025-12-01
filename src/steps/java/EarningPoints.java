@@ -6,8 +6,7 @@ import net.thucydides.jbehave.ThucydidesJUnitStories;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = {"@earning_points"}, // Executa apenas cenários com esta tag.
-                format = {"json:target/cucumber/earning_points.json"},
+@CucumberOptions(tags = "@earning_points", // Executa apenas cenários com esta tag.
                 plugin = {"pretty", "html:target/cucumber-html-report"},
                 features = "src/test/resources/features",
                 glue = {"steps.java"}) // Armazena os relatórios em formato JSON neste arquivo.

@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="expediagroup.beans.bull.bean.transformer" type="repository">
+    <properties maven-id="com.expediagroup.beans:bull-bean-transformer:2.2.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/expediagroup/beans/bull-bean-transformer/2.2.4/bull-bean-transformer-2.2.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/expediagroup/beans/bull-converter/2.2.4/bull-converter-2.2.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/expediagroup/beans/bull-common/2.2.4/bull-common-2.2.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/8.0.0.Final/hibernate-validator-8.0.0.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging-annotations/2.2.1.Final/jboss-logging-annotations-2.2.1.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging-processor/2.2.1.Final/jboss-logging-processor-2.2.1.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/jdeparser/jdeparser/2.0.3.Final/jdeparser-2.0.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jakarta.el/4.0.2/jakarta.el-4.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/el/jakarta.el-api/4.0.0/jakarta.el-api-4.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/expediagroup/beans/bull-bean-transformer/2.2.4/bull-bean-transformer-2.2.4-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/expediagroup/beans/bull-converter/2.2.4/bull-converter-2.2.4-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/expediagroup/beans/bull-common/2.2.4/bull-common-2.2.4-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.5.1/classmate-1.5.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging-annotations/2.2.1.Final/jboss-logging-annotations-2.2.1.Final-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging-processor/2.2.1.Final/jboss-logging-processor-2.2.1.Final-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/jdeparser/jdeparser/2.0.3.Final/jdeparser-2.0.3.Final-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jakarta.el/4.0.2/jakarta.el-4.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/el/jakarta.el-api/4.0.0/jakarta.el-api-4.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

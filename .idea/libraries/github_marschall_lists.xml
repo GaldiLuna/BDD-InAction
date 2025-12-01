@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="github.marschall.lists" type="repository">
+    <properties maven-id="com.github.marschall:lists:1.2.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/marschall/lists/1.2.0/lists-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/marschall/lists/1.2.0/lists-1.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

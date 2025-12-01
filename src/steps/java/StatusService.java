@@ -10,12 +10,12 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class StatusService {
-    protected FrequentFlyer(String frequentFlyerNumber,
-                            String firstName,
-                            String lastName,
-                            Status status,
-                            int statusPoints,
-                            StatusService statusService) { // Passa um objeto StatusService no construtor.
+    protected void FrequentFlyer(String frequentFlyerNumber,
+                                 String firstName,
+                                 String lastName,
+                                 Status status,
+                                 int statusPoints,
+                                 StatusService statusService) { // Passa um objeto StatusService no construtor.
         // ...
         this.statusService = statusService;
     }
@@ -33,6 +33,10 @@ public class StatusService {
         // THEN
         assertThat(member.getStatusPoints(),is(greaterThanOrEqualTo((300))));
         assertThat(member.getStatus(), is(Status.Silver));
+    }
+
+    private Object statusLevelFor(int i) {
+        return null;
     }
 
     StatusService statusService = new InMemoryStatusService();

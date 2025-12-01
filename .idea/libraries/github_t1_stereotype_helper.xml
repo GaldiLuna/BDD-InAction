@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="github.t1.stereotype.helper" type="repository">
+    <properties maven-id="com.github.t1:stereotype-helper:1.0.8" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/t1/stereotype-helper/1.0.8/stereotype-helper-1.0.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/t1/stereotype-helper/1.0.8/stereotype-helper-1.0.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

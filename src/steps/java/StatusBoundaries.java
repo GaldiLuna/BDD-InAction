@@ -6,7 +6,11 @@ public class StatusBoundaries extends ColumnFixture {
     public int extraPoints;
 
     public String finalStatus() {
-        finalStatus = ...
-        return finalStatus; // Invoca o código de produção para determinar o valor do status final.
+        Object finalStatus = determineFinalStatus(initialStatus, initialStatusPoints, extraPoints);
+        return finalStatus.toString(); // Invoca o código de produção para determinar o valor do status final.
+    }
+
+    private Object determineFinalStatus(String initialStatus, int initialStatusPoints, int extraPoints) {
+        return null;
     }
 }

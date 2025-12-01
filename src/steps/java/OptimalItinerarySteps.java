@@ -1,11 +1,14 @@
 package steps.java;
 
+import org.fest.assertions.BooleanAssert;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Pending; // Marcador de pendente
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+
+import java.time.LocalTime;
 import java.util.List;
-import org.joda.time.LocalTime;
+
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -36,6 +39,10 @@ public class OptimalItinerarySteps {
     @Then("I should be told about the trains at: $expectedTrainTimes")
     public void shouldBeInformedAbout(List<LocalTime> expectedTrainTimes) {
         assertThat(proposedTrainTimes).isEqualTo(expectedTrainTimes);
+    }
+
+    private BooleanAssert assertThat(List<LocalTime> proposedTrainTimes) {
+        return null;
     }
 
 }

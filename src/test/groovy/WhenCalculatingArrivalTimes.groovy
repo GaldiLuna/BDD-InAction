@@ -1,8 +1,12 @@
 import org.joda.time.LocalTime;
 //import spock.lang.Specification;
-import org.apache.tools.ant.taskdefs.optional.extension.Specification;
+//import org.apache.tools.ant.taskdefs.optional.extension.Specification;
+import steps.java.ItineraryService;
+import steps.services.Specification;
 
-class WhenCalculatingArrivalTimes extends Specification {
+import java.lang.annotation.Annotation;
+
+class WhenCalculatingArrivalTimes implements Specification {
     // Spock tests must extend the Specification class
     ItineraryService itineraryService;
 
@@ -27,5 +31,25 @@ class WhenCalculatingArrivalTimes extends Specification {
         def hour = Integer.valueOf(time.split(':')[0])
         def minute = Integer.valueOf(time.split(':')[1])
         new LocalTime(hour.toInteger(), minute.toInteger())
+    }
+
+    @Override
+    boolean equals(Object obj) {
+        return false
+    }
+
+    @Override
+    int hashCode() {
+        return 0
+    }
+
+    @Override
+    String toString() {
+        return null
+    }
+
+    @Override
+    Class<? extends Annotation> annotationType() {
+        return null
     }
 }

@@ -15,7 +15,11 @@ public class FrequentFlyer {
     // Construtor privado
     protected FrequentFlyer(String frequentFlyerNumber,
                             String firstName,
-                            String lastName) { }
+                            String lastName, StatusService statusService) { }
+
+    public static FrequentFlyer called(String name) {
+        return null;
+    }
 
     public Status getStatus() {
         return status;
@@ -45,6 +49,10 @@ public class FrequentFlyer {
         return null;
     }
 
+    public Integer getStatusPoints() {
+        return 0;
+    }
+
     public static class FFBuilder {
         private String frequentFlyerNumber;
 
@@ -58,11 +66,11 @@ public class FrequentFlyer {
         public FrequentFlyer named(String firstName, String lastName) {
             return new FrequentFlyer(frequentFlyerNumber,
                     firstName,
-                    lastName);
+                    lastName, statusService);
         }
     }
 
-    StatusService statusService;
+    static StatusService statusService;
     public void setStatusPoints(int statusPoints) {
         this.statusPoints = statusPoints;
         updateStatusLevel(); // Atualiza o nível de status para o nível apropriado.

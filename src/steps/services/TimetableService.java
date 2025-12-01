@@ -18,8 +18,10 @@ public interface TimetableService {
         return (List<LocalTime>) line.getOrigin();
     }
 
+    LocalTime getNextArrival(String lineName, String stopName, LocalTime fromTime);
+
     // Assinatura (mantida por completude, embora não implementada neste exercício)
-    public default List<Line> findLinesThrough(String departure, String destination) {
+    public default List<Line.LineBuilder> findLinesThrough(String departure, String destination) {
         // ...
         return Collections.emptyList(); // Apenas um placeholder
     }

@@ -1,7 +1,8 @@
 package steps.java;
 
-import org.springframework.stereotype.Service;
+//import org.springframework.stereotype.Service;
 import steps.services.FlightStatus;
+import steps.services.Service;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

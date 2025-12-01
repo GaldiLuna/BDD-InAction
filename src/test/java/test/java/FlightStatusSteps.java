@@ -11,8 +11,11 @@ import steps.services.WebAppConfiguration;
 
 import static java.nio.file.Paths.get;
 import static org.hamcrest.Matchers.is;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view; // Import necessário
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model; // Import necessário
+import org.springframework.test.web.servlet.ResultMatcher;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -49,6 +52,7 @@ public class FlightStatusSteps {
     @Then("^I should see that it is (.*)$")
     public void I_should_see_that_it_is(FlightStatus expectedStatus)
             throws Throwable {
+        assert view() != null;
         resultActions.andExpect(view().name()) // A view correta é usada para exibir os resultados?
                 .andExpect((org.springframework.test.web.servlet.ResultMatcher) model().attribute("flightId"
                 ))
@@ -56,7 +60,7 @@ public class FlightStatusSteps {
                 ));
     }
 
-    private <E extends Enum<E>> Enum<E> view() {
+    private Node view() {
         return null;
     }
 

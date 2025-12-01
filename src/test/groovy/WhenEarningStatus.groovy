@@ -1,6 +1,10 @@
 package test.groovy
 
-class WhenEarningStatus extends Specification {
+import steps.services.Specification
+
+import java.lang.annotation.Annotation
+
+class WhenEarningStatus implements Specification {
     def "should earn status based on the number of points earned"() {
         given:
         def member = FrequentFlyer.withFrequentFlyerNumber("12345678")
@@ -21,5 +25,25 @@ class WhenEarningStatus extends Specification {
         BRONZE        | 100           | 200          | SILVER
         SILVER        | 0             | 700          | GOLD
         GOLD          | 0             | 1500         | PLATINUM
+    }
+
+    @Override
+    boolean equals(Object obj) {
+        return false
+    }
+
+    @Override
+    int hashCode() {
+        return 0
+    }
+
+    @Override
+    String toString() {
+        return null
+    }
+
+    @Override
+    Class<? extends Annotation> annotationType() {
+        return null
     }
 }

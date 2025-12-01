@@ -1,14 +1,14 @@
 import org.joda.time.LocalTime;
 //import spock.lang.Specification;
-//import org.apache.tools.ant.taskdefs.optional.extension.Specification
+//import org.apache.tools.ant.taskdefs.optional.extension.Specification;
 import steps.services.Specification;
-import steps.services.TimetableService
+import steps.services.DefaultTimetableService;
 
 import java.lang.annotation.Annotation;
 
 class WhenFindingArrivalTimes implements Specification {
 
-    TimetableService timetableService = new TimetableService()
+    DefaultTimetableService timetableService = new DefaultTimetableService()
 
     // Função utilitária para criar LocalTime (copiada de 2.4.4)
     def at(int hour, int minute) {

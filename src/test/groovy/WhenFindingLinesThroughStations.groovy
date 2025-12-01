@@ -1,10 +1,10 @@
-import steps.services.TimetableService;
+import steps.services.DefaultTimetableService;
 import steps.services.Specification
 
 import java.lang.annotation.Annotation;
 
 class WhenFindingLinesThroughStations implements Specification {
-    def timetableService = new TimetableService()
+    def timetableService = new DefaultTimetableService()
 
     def "should find the correct lines between two stations"() {
         when: // Ação sob teste.
